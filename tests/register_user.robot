@@ -13,4 +13,4 @@ Register a new user
     [Tags]    register
     Given on the registration page
     When fill the form with valid data
-    #Then valid that the user was registered
+    Then valid that the user was registered
