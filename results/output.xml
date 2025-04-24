@@ -1,85 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-04-09T22:34:32.938329" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\Maiara\Desktop\automation-exercise\automation-exercise\tests">
-<suite id="s1-s1" name="Register User" source="C:\Users\Maiara\Desktop\automation-exercise\automation-exercise\tests\register_user.robot">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-04-23T22:58:52.312683" rpa="false" schemaversion="5">
+<suite id="s1" name="Login User" source="C:\Users\Maiara\Desktop\automation-exercise\automation-exercise\tests\login_user.robot">
 <kw name="Open the browser" owner="RegisterUserPage" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:33.220553" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<msg time="2025-04-23T22:58:52.536173" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-09T22:34:33.220267" elapsed="4.024908"/>
+<status status="PASS" start="2025-04-23T22:58:52.535949" elapsed="4.091357"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-09T22:34:37.245471" elapsed="0.026776"/>
+<status status="PASS" start="2025-04-23T22:58:56.627533" elapsed="0.024725"/>
 </kw>
-<status status="PASS" start="2025-04-09T22:34:33.219443" elapsed="4.052965"/>
+<status status="PASS" start="2025-04-23T22:58:52.535302" elapsed="4.117113"/>
 </kw>
-<test id="s1-s1-t1" name="Register a new user" line="12">
-<kw name="Given on the registration page" owner="RegisterUserPage">
+<test id="s1-t1" name="Login user with valid credentials" line="13">
+<kw name="Given on the login page" owner="LoginUserPage">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-23T22:58:56.653991" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-23T22:58:56.653706" elapsed="3.749492"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-23T22:59:00.403355" elapsed="0.031206"/>
+</kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:37.274105" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<msg time="2025-04-23T22:59:00.435266" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
 <arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-09T22:34:37.273694" elapsed="0.782154"/>
+<status status="PASS" start="2025-04-23T22:59:00.434853" elapsed="1.323792"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:38.081122" level="INFO">Element 'xpath=//h2[contains(text(), 'New User Signup!')]' is displayed.</msg>
-<arg>xpath=//h2[contains(text(), 'New User Signup!')]</arg>
+<msg time="2025-04-23T22:59:01.783502" level="INFO">Element 'xpath=//h2[contains(text(), 'Login to your account')]' is displayed.</msg>
+<arg>xpath=//h2[contains(text(), 'Login to your account')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-09T22:34:38.056044" elapsed="0.025196"/>
+<status status="PASS" start="2025-04-23T22:59:01.758888" elapsed="0.024692"/>
 </kw>
-<status status="PASS" start="2025-04-09T22:34:37.273229" elapsed="0.808127"/>
+<status status="PASS" start="2025-04-23T22:58:56.653232" elapsed="5.130441"/>
 </kw>
-<kw name="When fill the form with valid data" owner="RegisterUserPage">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:38.082172" level="INFO">Typing text 'Maria' into text field 'xpath=//*[@data-qa="signup-name"]'.</msg>
-<arg>xpath=//*[@data-qa="signup-name"]</arg>
-<arg>${USERNAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-09T22:34:38.081981" elapsed="0.071961"/>
+<kw name="When fill the form with valid data">
+<msg time="2025-04-23T22:59:01.784012" level="FAIL">Multiple keywords with name 'fill the form with valid data' found. Give the full name of the keyword you want to use:
+    LoginUserPage.Fill the form with valid data
+    RegisterUserPage.Fill the form with valid data</msg>
+<status status="FAIL" start="2025-04-23T22:59:01.783973" elapsed="0.000085">Multiple keywords with name 'fill the form with valid data' found. Give the full name of the keyword you want to use:
+    LoginUserPage.Fill the form with valid data
+    RegisterUserPage.Fill the form with valid data</status>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:38.154506" level="INFO">Typing text 'maiara@gmail.com' into text field 'xpath=//*[@data-qa="signup-email"]'.</msg>
-<arg>xpath=//*[@data-qa="signup-email"]</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-09T22:34:38.154213" elapsed="0.056402"/>
+<kw name="Then valid that the user was logged in" owner="LoginUserPage">
+<status status="NOT RUN" start="2025-04-23T22:59:01.784279" elapsed="0.000031"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:38.210933" level="INFO">Clicking button 'xpath=//*[@data-qa="signup-button"]'.</msg>
-<arg>xpath=//*[@data-qa="signup-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-09T22:34:38.210776" elapsed="2.636105"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-04-09T22:34:41.052830" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-09T22:34:41.052982" level="FAIL">Element with locator 'xpath=//*[contains(text(), 'Ente Account Information')]' not found.</msg>
-<arg>xpath=//*[contains(text(), 'Ente Account Information')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-04-09T22:34:40.847162" elapsed="0.208250">Element with locator 'xpath=//*[contains(text(), 'Ente Account Information')]' not found.</status>
-</kw>
-<status status="FAIL" start="2025-04-09T22:34:38.081709" elapsed="2.973874">Element with locator 'xpath=//*[contains(text(), 'Ente Account Information')]' not found.</status>
-</kw>
-<tag>register</tag>
-<status status="FAIL" start="2025-04-09T22:34:37.272537" elapsed="3.783347">Element with locator 'xpath=//*[contains(text(), 'Ente Account Information')]' not found.</status>
+<tag>login</tag>
+<status status="FAIL" start="2025-04-23T22:58:56.652519" elapsed="5.131964">Multiple keywords with name 'fill the form with valid data' found. Give the full name of the keyword you want to use:
+    LoginUserPage.Fill the form with valid data
+    RegisterUserPage.Fill the form with valid data</status>
 </test>
-<doc>This is a test suite for registering a user</doc>
-<status status="FAIL" start="2025-04-09T22:34:32.972617" elapsed="8.084000"/>
-</suite>
-<status status="FAIL" start="2025-04-09T22:34:32.940133" elapsed="8.117277"/>
+<doc>This is a test suite for logging in a user</doc>
+<status status="FAIL" start="2025-04-23T22:58:52.313840" elapsed="9.471342"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">register</stat>
+<stat pass="0" fail="1" skip="0">login</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Register User">Tests.Register User</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login User">Login User</stat>
 </suite>
 </statistics>
 <errors>
