@@ -15,3 +15,9 @@ Login user with valid credentials
     Given on the login page
     When fill the form with email and password
     Then valid that the user was logged in
+
+Login user with invalid credentials
+    [Tags]    login_invalid
+    Given on the login page
+    When fill the form with invalid email and password
+    Then valid that the user was not logged in

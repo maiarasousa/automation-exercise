@@ -1,84 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-04-23T23:10:31.664484" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-04-24T21:17:37.686655" rpa="false" schemaversion="5">
 <suite id="s1" name="Login User" source="C:\Users\Maiara\Desktop\automation-exercise\automation-exercise\tests\login_user.robot">
 <kw name="Open the browser" owner="RegisterUserPage" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:31.898478" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<msg time="2025-04-24T21:17:37.929161" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-23T23:10:31.898253" elapsed="4.091084"/>
+<status status="PASS" start="2025-04-24T21:17:37.928884" elapsed="3.899858"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-23T23:10:35.989527" elapsed="0.026478"/>
+<status status="PASS" start="2025-04-24T21:17:41.828926" elapsed="0.026603"/>
 </kw>
-<status status="PASS" start="2025-04-23T23:10:31.897731" elapsed="4.118509"/>
+<status status="PASS" start="2025-04-24T21:17:37.928276" elapsed="3.927425"/>
 </kw>
 <test id="s1-t1" name="Login user with valid credentials" line="13">
 <kw name="Given on the login page" owner="LoginUserPage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:36.017866" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<msg time="2025-04-24T21:17:41.857604" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
 <arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T23:10:36.017500" elapsed="0.848854"/>
+<status status="PASS" start="2025-04-24T21:17:41.857132" elapsed="0.753356"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:36.886324" level="INFO">Element 'xpath=//h2[contains(text(), 'Login to your account')]' is displayed.</msg>
+<msg time="2025-04-24T21:17:42.632937" level="INFO">Element 'xpath=//h2[contains(text(), 'Login to your account')]' is displayed.</msg>
 <arg>xpath=//h2[contains(text(), 'Login to your account')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-23T23:10:36.866569" elapsed="0.019834"/>
+<status status="PASS" start="2025-04-24T21:17:42.610674" elapsed="0.022340"/>
 </kw>
-<status status="PASS" start="2025-04-23T23:10:36.017097" elapsed="0.869395"/>
+<status status="PASS" start="2025-04-24T21:17:41.856629" elapsed="0.776475"/>
 </kw>
 <kw name="When fill the form with email and password" owner="LoginUserPage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:36.887206" level="INFO">Typing text 'marianasilva@gmail.com' into text field 'xpath=//*[@data-qa="login-email"]'.</msg>
+<msg time="2025-04-24T21:17:42.633790" level="INFO">Typing text 'marianasilva@gmail.com' into text field 'xpath=//*[@data-qa="login-email"]'.</msg>
 <arg>xpath=//*[@data-qa="login-email"]</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T23:10:36.887043" elapsed="0.076070"/>
+<status status="PASS" start="2025-04-24T21:17:42.633616" elapsed="0.065697"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:36.963759" level="INFO">Typing password into text field 'xpath=//*[@data-qa="login-password"]'.</msg>
-<msg time="2025-04-23T23:10:37.005376" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-24T21:17:42.699698" level="INFO">Typing password into text field 'xpath=//*[@data-qa="login-password"]'.</msg>
+<msg time="2025-04-24T21:17:42.740273" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>xpath=//*[@data-qa="login-password"]</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T23:10:36.963396" elapsed="0.118073"/>
+<status status="PASS" start="2025-04-24T21:17:42.699499" elapsed="0.185293"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:37.081770" level="INFO">Clicking button 'xpath=//*[@data-qa="login-button"]'.</msg>
+<msg time="2025-04-24T21:17:42.885259" level="INFO">Clicking button 'xpath=//*[@data-qa="login-button"]'.</msg>
 <arg>xpath=//*[@data-qa="login-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-23T23:10:37.081618" elapsed="2.617170"/>
+<status status="PASS" start="2025-04-24T21:17:42.885019" elapsed="1.608402"/>
 </kw>
-<status status="PASS" start="2025-04-23T23:10:36.886818" elapsed="2.812073"/>
+<status status="PASS" start="2025-04-24T21:17:42.633397" elapsed="1.860134"/>
 </kw>
 <kw name="Then valid that the user was logged in" owner="LoginUserPage">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-04-23T23:10:39.715958" level="INFO">Element 'xpath=//*[contains(text(), 'Logged in as')]' is displayed.</msg>
+<msg time="2025-04-24T21:17:44.519448" level="INFO">Element 'xpath=//*[contains(text(), 'Logged in as')]' is displayed.</msg>
 <arg>xpath=//*[contains(text(), 'Logged in as')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-23T23:10:39.699458" elapsed="0.016580"/>
+<status status="PASS" start="2025-04-24T21:17:44.494334" elapsed="0.025197"/>
 </kw>
-<status status="PASS" start="2025-04-23T23:10:39.699237" elapsed="0.016887"/>
+<status status="PASS" start="2025-04-24T21:17:44.493892" elapsed="0.025723"/>
 </kw>
 <tag>login</tag>
-<status status="PASS" start="2025-04-23T23:10:36.016376" elapsed="3.699983"/>
+<status status="PASS" start="2025-04-24T21:17:41.855835" elapsed="2.663974"/>
+</test>
+<test id="s1-t2" name="Login user with invalid credentials" line="19">
+<kw name="Given on the login page" owner="LoginUserPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-24T21:17:44.521038" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-24T21:17:44.520898" elapsed="0.923247"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-24T21:17:45.455678" level="INFO">Element 'xpath=//h2[contains(text(), 'Login to your account')]' is displayed.</msg>
+<arg>xpath=//h2[contains(text(), 'Login to your account')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-24T21:17:45.444319" elapsed="0.011435"/>
+</kw>
+<status status="PASS" start="2025-04-24T21:17:44.520701" elapsed="0.935134"/>
+</kw>
+<kw name="When fill the form with invalid email and password" owner="LoginUserPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-24T21:17:45.456507" level="INFO">Typing text 'marianasilva@gmail.com' into text field 'xpath=//*[@data-qa="login-email"]'.</msg>
+<arg>xpath=//*[@data-qa="login-email"]</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-24T21:17:45.456338" elapsed="0.047726"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-24T21:17:45.504411" level="INFO">Typing password into text field 'xpath=//*[@data-qa="login-password"]'.</msg>
+<msg time="2025-04-24T21:17:45.521311" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath=//*[@data-qa="login-password"]</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-24T21:17:45.504217" elapsed="0.117262"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-24T21:17:45.621770" level="INFO">Clicking button 'xpath=//*[@data-qa="login-button"]'.</msg>
+<arg>xpath=//*[@data-qa="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-24T21:17:45.621625" elapsed="0.757155"/>
+</kw>
+<status status="PASS" start="2025-04-24T21:17:45.456110" elapsed="0.922781"/>
+</kw>
+<kw name="Then valid that the user was not logged in" owner="LoginUserPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-24T21:17:46.394040" level="INFO">Element 'xpath=//*[contains(text(),'Your email or password is incorrect!')]' is displayed.</msg>
+<arg>xpath=//*[contains(text(),'Your email or password is incorrect!')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-24T21:17:46.379475" elapsed="0.014649"/>
+</kw>
+<status status="PASS" start="2025-04-24T21:17:46.379190" elapsed="0.015014"/>
+</kw>
+<tag>login_invalid</tag>
+<status status="PASS" start="2025-04-24T21:17:44.520333" elapsed="1.874066"/>
 </test>
 <doc>This is a test suite for logging in a user</doc>
-<status status="PASS" start="2025-04-23T23:10:31.665820" elapsed="8.051418"/>
+<status status="PASS" start="2025-04-24T21:17:37.687933" elapsed="8.706977"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">login_invalid</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login User">Login User</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Login User">Login User</stat>
 </suite>
 </statistics>
 <errors>
