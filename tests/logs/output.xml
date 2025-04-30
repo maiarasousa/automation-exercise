@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-04-29T21:06:04.862179" rpa="false" schemaversion="5">
+<suite id="s1" name="Register User" source="C:\Users\Maiara\Desktop\automation-exercise\automation-exercise\tests\register_user.robot">
+<kw name="Open the browser" owner="RegisterUserPage" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:05.353917" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-29T21:06:05.353638" elapsed="9.693355"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-29T21:06:15.047181" elapsed="0.030130"/>
+</kw>
+<status status="PASS" start="2025-04-29T21:06:05.352444" elapsed="9.725064"/>
+</kw>
+<test id="s1-t1" name="Register a new user with email already registered" line="18">
+<kw name="Given on the registration page" owner="RegisterUserPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:15.079533" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a'.</msg>
+<arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T21:06:15.079129" elapsed="1.342778"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:16.439095" level="INFO">Element 'xpath=//h2[contains(text(), 'New User Signup!')]' is displayed.</msg>
+<arg>xpath=//h2[contains(text(), 'New User Signup!')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T21:06:16.422070" elapsed="0.017105"/>
+</kw>
+<status status="PASS" start="2025-04-29T21:06:15.078617" elapsed="1.360652"/>
+</kw>
+<kw name="When fill the form with email already registered" owner="RegisterUserPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:16.439968" level="INFO">Typing text 'Mariana' into text field 'xpath=//*[@data-qa="signup-name"]'.</msg>
+<arg>xpath=//*[@data-qa="signup-name"]</arg>
+<arg>Mariana</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T21:06:16.439810" elapsed="0.054790"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:16.494914" level="INFO">Typing text 'marianasilva@gmail.com' into text field 'xpath=//*[@data-qa="signup-email"]'.</msg>
+<arg>xpath=//*[@data-qa="signup-email"]</arg>
+<arg>marianasilva@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T21:06:16.494754" elapsed="0.090562"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:16.585618" level="INFO">Clicking button 'xpath=//*[@data-qa="signup-button"]'.</msg>
+<arg>xpath=//*[@data-qa="signup-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-29T21:06:16.585469" elapsed="1.498184"/>
+</kw>
+<status status="PASS" start="2025-04-29T21:06:16.439556" elapsed="1.644195"/>
+</kw>
+<kw name="Then valid message of the email adress already exist" owner="RegisterUserPage">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-29T21:06:18.098608" level="INFO">Element 'xpath=//*[contains(text(), 'Email Address already exist!')]' is displayed.</msg>
+<arg>xpath=//*[contains(text(), 'Email Address already exist!')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-29T21:06:18.084252" elapsed="0.014434"/>
+</kw>
+<status status="PASS" start="2025-04-29T21:06:18.084027" elapsed="0.014741"/>
+</kw>
+<tag>register_email_already_registered</tag>
+<status status="PASS" start="2025-04-29T21:06:15.077689" elapsed="3.021280"/>
+</test>
+<doc>This is a test suite for registering a user</doc>
+<status status="PASS" start="2025-04-29T21:06:04.863388" elapsed="13.236176"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">register_email_already_registered</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Register User">Register User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

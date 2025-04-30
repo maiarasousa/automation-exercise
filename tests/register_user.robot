@@ -14,3 +14,9 @@ Register a new user
     Given on the registration page
     When fill the form with valid data
     Then valid that the user was registered
+
+Register a new user with email already registered
+    [Tags]    register_email_already_registered
+    Given on the registration page
+    When fill the form with email already registered
+    Then valid message of the email adress already exist

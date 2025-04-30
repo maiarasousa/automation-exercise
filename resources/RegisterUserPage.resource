@@ -70,3 +70,11 @@ Valid that the user was registered
     Element Should Be Visible        xpath=//*[contains(text(), 'Account Created!')]
     Click Element        xpath=//*[@data-qa="continue-button"]
     Element Should Be Visible        xpath=//*[contains(text(), 'Logged in as')]
+
+Fill the form with email already registered
+    Input Text        xpath=//*[@data-qa="signup-name"]      Mariana   
+    Input Text        xpath=//*[@data-qa="signup-email"]     marianasilva@gmail.com
+    Click Button       xpath=//*[@data-qa="signup-button"]
+
+Valid message of the email adress already exist
+    Element Should Be Visible        xpath=//*[contains(text(), 'Email Address already exist!')]

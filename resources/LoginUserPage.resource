@@ -24,8 +24,8 @@ Fill the form with email and password
     Click Button       xpath=//*[@data-qa="login-button"]
 
 Valid that the user was logged in
-    
-    Element Should Be Visible        xpath=//*[contains(text(), 'Logged in as')]
+
+    Wait Until Element Is Visible    xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[10]/a[contains(text(), 'Logged in as')]
 
 Fill the form with invalid email and password
     
