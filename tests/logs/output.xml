@@ -1,63 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-05-12T22:54:30.490749" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Case Page" source="C:\Users\Maiara\Desktop\automation-exercise\tests\test_case_page.robot">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-05-14T23:31:02.424608" rpa="false" schemaversion="5">
+<suite id="s1" name="Subscription Home Page" source="C:\Users\Maiara\Desktop\automation-exercise\tests\subscription_home_page.robot">
 <kw name="Open the browser" owner="RegisterUserPage" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-12T22:54:31.006576" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
+<msg time="2025-05-14T23:31:03.003981" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-05-12T22:54:31.006340" elapsed="3.889565"/>
+<status status="PASS" start="2025-05-14T23:31:03.003759" elapsed="3.621667"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-05-12T22:54:34.896105" elapsed="0.029926"/>
+<status status="PASS" start="2025-05-14T23:31:06.625622" elapsed="0.026212"/>
 </kw>
-<status status="PASS" start="2025-05-12T22:54:31.005532" elapsed="3.920626"/>
+<status status="PASS" start="2025-05-14T23:31:03.002904" elapsed="3.649057"/>
 </kw>
-<test id="s1-t1" name="Test case page" line="11">
-<kw name="Given that home page is visible" owner="TestCasePage">
+<test id="s1-t1" name="Subscription home page" line="12">
+<kw name="Given that home page is visible with successfully" owner="ProductsDetailsPage">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-05-12T22:54:34.949470" level="INFO">Element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[1]/a' is displayed.</msg>
+<msg time="2025-05-14T23:31:06.678290" level="INFO">Element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[1]/a' is displayed.</msg>
 <arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[1]/a</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T22:54:34.927002" elapsed="0.022613"/>
+<status status="PASS" start="2025-05-14T23:31:06.653543" elapsed="0.024871"/>
 </kw>
-<status status="PASS" start="2025-05-12T22:54:34.926745" elapsed="0.023056"/>
+<status status="PASS" start="2025-05-14T23:31:06.652994" elapsed="0.025558"/>
 </kw>
-<kw name="When click on test case page" owner="TestCasePage">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-05-12T22:54:34.951429" level="INFO">Clicking element 'xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[5]/a'.</msg>
-<arg>xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[5]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-05-12T22:54:34.951113" elapsed="0.834788"/>
+<kw name="And scroll to the subscription" owner="SubscriptionHomePage">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="susbscribe_email"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-14T23:31:06.679181" elapsed="0.282642"/>
 </kw>
-<status status="PASS" start="2025-05-12T22:54:34.950528" elapsed="0.835514"/>
-</kw>
-<kw name="Then valid navigated to test cases page successfully" owner="TestCasePage">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-05-12T22:54:35.817525" level="INFO">Element 'xpath=//*[@id="form"]/div/div[1]/div/h2/b' is displayed.</msg>
-<arg>xpath=//*[@id="form"]/div/div[1]/div/h2/b</arg>
+<msg time="2025-05-14T23:31:06.975540" level="INFO">Element 'xpath=//*[@id="footer"]/div[1]/div/div/div[2]/div/h2' is displayed.</msg>
+<arg>xpath=//*[@id="footer"]/div[1]/div/div/div[2]/div/h2</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-05-12T22:54:35.786961" elapsed="0.030648"/>
+<status status="PASS" start="2025-05-14T23:31:06.962007" elapsed="0.013618"/>
 </kw>
-<status status="PASS" start="2025-05-12T22:54:35.786496" elapsed="0.031204"/>
+<status status="PASS" start="2025-05-14T23:31:06.678931" elapsed="0.296779"/>
 </kw>
-<tag>test_case_page</tag>
-<status status="PASS" start="2025-05-12T22:54:34.926250" elapsed="0.891662"/>
+<kw name="When fill my email and click button" owner="SubscriptionHomePage">
+<kw name="Email" owner="FakerLibrary">
+<msg time="2025-05-14T23:31:06.976632" level="INFO">${Email} = steven53@example.org</msg>
+<var>${Email}</var>
+<status status="PASS" start="2025-05-14T23:31:06.976308" elapsed="0.000354"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-14T23:31:06.976972" level="INFO">Typing text 'steven53@example.org' into text field 'xpath=//*[@id="susbscribe_email"]'.</msg>
+<arg>xpath=//*[@id="susbscribe_email"]</arg>
+<arg>${EMAIL}</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-14T23:31:06.976775" elapsed="0.071875"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-14T23:31:07.049333" level="INFO">Clicking element 'xpath=//*[@id="subscribe"]'.</msg>
+<arg>xpath=//*[@id="subscribe"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-14T23:31:07.048976" elapsed="0.144324"/>
+</kw>
+<status status="PASS" start="2025-05-14T23:31:06.976010" elapsed="0.217392"/>
+</kw>
+<kw name="Then validate the subscription message" owner="SubscriptionHomePage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="success-subscribe"]/div</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-14T23:31:07.193926" elapsed="0.032183"/>
+</kw>
+<status status="PASS" start="2025-05-14T23:31:07.193689" elapsed="0.032526"/>
+</kw>
+<tag>subscription</tag>
+<status status="PASS" start="2025-05-14T23:31:06.652082" elapsed="0.574400"/>
 </test>
-<doc>Test case page</doc>
-<status status="PASS" start="2025-05-12T22:54:30.492682" elapsed="5.325747"/>
+<doc>This is a test suite for subscription home page</doc>
+<status status="PASS" start="2025-05-14T23:31:02.425983" elapsed="4.801161"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">test_case_page</stat>
+<stat pass="1" fail="0" skip="0">subscription</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test Case Page">Test Case Page</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Subscription Home Page">Subscription Home Page</stat>
 </suite>
 </statistics>
 <errors>

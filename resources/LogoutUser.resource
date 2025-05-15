@@ -2,7 +2,7 @@
 
 Library           SeleniumLibrary
 
-Documentation
+Documentation    This is a test suite for logout user page
 
 *** Keywords ***
 
