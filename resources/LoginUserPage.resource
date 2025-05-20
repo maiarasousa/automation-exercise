@@ -29,9 +29,9 @@ Valid that the user was logged in
 
 Fill the form with invalid email and password
     
-        Input Text        xpath=//*[@data-qa="login-email"]   ${EMAIL}
-        Input Password       xpath=//*[@data-qa="login-password"]   ${INVALID_PASSWORD}
-        Click Button       xpath=//*[@data-qa="login-button"]
+    Input Text        xpath=//*[@data-qa="login-email"]   ${EMAIL}
+    Input Password       xpath=//*[@data-qa="login-password"]   ${INVALID_PASSWORD}
+    Click Button       xpath=//*[@data-qa="login-button"]
 Valid that the user was not logged in
-
+    Sleep    2
     Element Should Be Visible        xpath=//*[contains(text(),'Your email or password is incorrect!')]

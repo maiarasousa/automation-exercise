@@ -6,6 +6,7 @@ Resource          ../resources/RegisterUserPage.resource
 Resource          ../resources/ContactUsPage.resource
 
 Suite Setup    Open the browser
+Suite Teardown    Close Browser
 
 *** Test Cases ***
 

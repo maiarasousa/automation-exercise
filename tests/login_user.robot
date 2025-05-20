@@ -1,4 +1,5 @@
 *** Settings ***
+Library    SeleniumLibrary
 
 Documentation     This is a test suite for logging in a user
 
@@ -7,6 +8,9 @@ Resource          ../resources/LoginUserPage.resource
 Resource          ../resources/RegisterUserPage.resource
 
 Suite Setup    Open the browser
+Suite Teardown    Close Browser
+
+
 
 *** Test Cases ***
 

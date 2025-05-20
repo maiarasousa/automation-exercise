@@ -7,7 +7,9 @@ Resource          ../resources/RegisterUserPage.resource
 Resource          ../resources/SearchProduct.resource
 
 Suite Setup   Open the browser
+Suite Teardown    Close Browser
 
+Library    SeleniumLibrary
 
 ***Test Cases***
 Search product

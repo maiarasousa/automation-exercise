@@ -6,6 +6,9 @@ Resource          ../resources/RegisterUserPage.resource
 Resource          ../resources/TestCasePage.resource
 
 Suite Setup    Open the browser
+Suite Teardown    Close Browser
+
+Library    SeleniumLibrary
 
 ***Test Cases***
 Test case page

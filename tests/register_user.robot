@@ -5,7 +5,9 @@ Documentation     This is a test suite for registering a user
 Resource          ../resources/RegisterUserPage.resource
 
 Suite Setup    Open the browser
+Suite Teardown    Close Browser
 
+Library    SeleniumLibrary
 
 *** Test Cases ***
 

@@ -28,6 +28,7 @@ Open the browser
     Maximize Browser Window
 
 On the registration page
+    Sleep   2
     Click Element    xpath=//*[@id="header"]/div/div/div/div[2]/div/ul/li[4]/a
     Element Should Be Visible    xpath=//h2[contains(text(), 'New User Signup!')]
 
@@ -37,6 +38,7 @@ Fill the form with valid data
     ${Email}           FakerLibrary.Email 
     Input Text        xpath=//*[@data-qa="signup-email"]   ${EMAIL}    ${Email}
     Click Button       xpath=//*[@data-qa="signup-button"]
+    Sleep      2
     Element Should Be Visible        xpath=//*[contains(text(),'Enter Account Information')]
     Click Element        xpath=//*[@id="id_gender2"]
     ${Password}        FakerLibrary.Password
@@ -77,4 +79,5 @@ Fill the form with email already registered
     Click Button       xpath=//*[@data-qa="signup-button"]
 
 Valid message of the email adress already exist
+    Sleep        2
     Element Should Be Visible        xpath=//*[contains(text(), 'Email Address already exist!')]

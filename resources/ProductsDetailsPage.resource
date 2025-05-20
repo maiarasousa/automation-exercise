@@ -16,6 +16,7 @@ Click on the products
     Element Should Be Visible   xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[1]/img
 
 Select the product
+    Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Click Element   xpath=/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[2]/ul/li/a
     Element Should Be Visible   xpath=/html/body/section/div/div/div[1]/div[1]/h2
 

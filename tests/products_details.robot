@@ -7,6 +7,9 @@ Resource          ../resources/RegisterUserPage.resource
 Resource          ../resources/ProductsDetailsPage.resource
 
 Suite Setup    Open the browser
+Suite Teardown    Close Browser
+
+Library    SeleniumLibrary
 
 ***Test Cases***
 Products details page
