@@ -1,6 +1,6 @@
 # Automation Exercise
 
-Este projeto tem como objetivo automatizar casos de teste para aplicações web, utilizando o framework Robot Framework. Ele inclui suítes e casos de teste organizados, além de relatórios detalhados de execução.
+Este projeto foi desenvolvido para fins de estudos, com o objetivo de aperfeiçoar meus conhecimentos em automação web, utilizando Python com Robot Framework em um sistema web de e-commerce. Ele inclui suítes e casos de teste organizados, além de relatórios detalhados de execução.
 
 ## 📋 Descrição
 
@@ -8,9 +8,7 @@ O repositório contém scripts de automação de testes desenvolvidos para facil
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Robot Framework**: Estrutura principal para automação dos testes.
-- **Linguagem**: Os testes são escritos em arquivos `.robot`, que permitem uma sintaxe simples e legível.
-- **Relatórios HTML**: Geração de logs e reports automáticos após cada execução.
+- 
 
 ## 📑 Estrutura do Projeto
 ```text
@@ -32,10 +30,10 @@ automation-exercise/
 │   ├── logout_user.robot
 │   ├── register_user.robot
 │   ├── test_case_page.robot
-│   └── logs/                    # Relatórios de execução dos testes
-│       ├── log.html
-│       ├── output.xml
-│       └── report.html
+│── logs/                        # Relatórios de execução dos testes
+│   ├── log.html
+│   ├── output.xml
+│   └── report.html
 ├── .gitignore                   # Ignora logs e resultados no controle de versão
 └── README.md                    # Documentação do projeto
 ```
