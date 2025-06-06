@@ -20,11 +20,14 @@ Neste repositório você vai encontrar scripts de automação de testes visando 
 ## 📑 Estrutura do Projeto
 ```text
 automation-exercise/
-├── data/
-│   └── image/
-│       └── Test_Qa.jpg          # Dados auxiliares para os testes
-├── reports/ # Relatórios de teste 
-├── resources/                   # Keywords e recursos reutilizáveis
+├── data/                        # Dados auxiliares para os testes
+│   └── image
+│   └── configs
+│   └── credentials               
+├── reports/                     # Relatórios de teste
+│   └── html
+│   └── xml
+├── resources/                   # Keywords de teste
 │   ├── ContactUsPage.resource
 │   ├── LoginUserPage.resource
 │   ├── LogoutUser.resource
@@ -32,17 +35,16 @@ automation-exercise/
 │   ├── RegisterUserPage.resource
 │   ├── SubscriptionHomePage.resource
 │   ├── TestCasePage.resource
-├── tests/                       # Casos de teste organizados por funcionalidade
+├── tests/                       # Casos de teste por funcionalidade
 │   ├── contact_us.robot
 │   ├── login_user.robot
 │   ├── logout_user.robot
 │   ├── register_user.robot
 │   ├── test_case_page.robot
-│── logs/ # Logs das execuções dos testes
+│── logs/                        # Logs das execuções dos testes
 │   ├── log.html
 │   ├── output.xml
-│   └── report.html
-├── .gitignore                   # Ignora logs e resultados no controle de versão
+├── .gitignore                   # Ignora arquivos irrelevantes para versionamento
 └── README.md                    # Documentação do projeto
 ```
 <p> A estrutura deste projeto foi planejada para garantir organização, reutilização e escalabilidade dos testes automatizados. Separar os arquivos de testes, recursos e dados facilita a manutenção e evitar duplicação de código, seguindo o princípio DRY (Don't Repeat Yourself). 
@@ -79,7 +81,7 @@ automation-exercise/
    pip install -r requirements.txt
    ```
 
-4. **Execute os testes**
+4. **Execute os testes de forma sequencial**
 - Use o parâmetro -i (include) para executar cenários com uma tag específica.
   
    - Executar testes de login:
@@ -99,8 +101,14 @@ automation-exercise/
    robot tests/
    ```
 
-6. **Veja os relatórios**
-   - Após a execução, acesse os arquivos `report.html` e `log.html` na pasta `tests/logs`.
+5. **Execute os testes em paralelo**
+# TODO
+
+6. **Execute os testes de forma headless**
+# TODO
+
+7. **Veja os relatórios**
+   - Após a execução, acesse os artefatos gerados em  `/reports` e `/logs`.
 
 ## 🤝 Como contribuir
 
