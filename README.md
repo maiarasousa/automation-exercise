@@ -23,7 +23,7 @@ automation-exercise/
 ├── data/
 │   └── image/
 │       └── Test_Qa.jpg          # Dados auxiliares para os testes
-├── reports/ 
+├── reports/ # Relatórios de teste 
 ├── resources/                   # Keywords e recursos reutilizáveis
 │   ├── ContactUsPage.resource
 │   ├── LoginUserPage.resource
@@ -38,7 +38,7 @@ automation-exercise/
 │   ├── logout_user.robot
 │   ├── register_user.robot
 │   ├── test_case_page.robot
-│── logs/                        # Relatórios de execução dos testes
+│── logs/ # Logs das execuções dos testes
 │   ├── log.html
 │   ├── output.xml
 │   └── report.html
