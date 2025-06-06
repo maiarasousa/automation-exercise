@@ -45,7 +45,7 @@ automation-exercise/
 ├── .gitignore                   # Ignora logs e resultados no controle de versão
 └── README.md                    # Documentação do projeto
 ```
-<p> A estrutura deste projeto foi planejada para garantir organização, reutilização e escalabilidade dos testes automatizados. Separar os arquivos de testes, recursos e dados facilita a manutenção e evita duplicação de código, seguindo o princípio DRY (Don't Repeat Yourself). 
+<p> A estrutura deste projeto foi planejada para garantir organização, reutilização e escalabilidade dos testes automatizados. Separar os arquivos de testes, recursos e dados facilita a manutenção e evitar duplicação de código, seguindo o princípio DRY (Don't Repeat Yourself). 
    
    Além disso, essa abordagem torna o projeto mais acessível para novos colaboradores, permitindo que qualquer pessoa compreenda rapidamente o funcionamento dos testes e contribua com facilidade. A estrutura modular também favorece a integração com pipelines de CI/CD, possibilitando execuções automáticas e contínuas. Com padronização clara e responsabilidades bem definidas, o projeto se torna uma base sólida e reutilizável, podendo ser adotado como modelo para outras squads ou equipes. Esses fatores tornam a automação mais sustentável no longo prazo e aumentam significativamente a qualidade e produtividade da equipe de QA.</p>
 
