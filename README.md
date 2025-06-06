@@ -25,7 +25,7 @@ automation-exercise/
 │   ├── CODEOWNERS               # Define responsáveis por pastas/arquivos
 │   ├── PULL_REQUEST_TEMPLATE.md # Template padrão para PRs
 ├── data/                        # Dados auxiliares para os testes
-│   └── image
+│   └── images
 │   └── configs
 │   └── credentials               
 ├── reports/                     # Relatórios de teste
