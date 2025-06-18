@@ -106,10 +106,44 @@ automation-exercise/
    ```
 
 5. **Execute os testes em paralelo**
-# TODO
+- Para otimizar o tempo de execução dos testes automatizados, este projeto suporta a execução paralela utilizando a ferramenta Pabot, que executa múltiplos testes Robot Framework simultaneamente.
+
+✅ Instalação do Pabot
+- Se ainda não tiver instalado, use o comando abaixo:
+```bash
+pip install robotframework-pabot
+```
+🚀 Execução em paralelo
+- Para executar os testes em paralelo e salvar os logs na pasta logs, use o comando abaixo:
+```bash
+pabot --processes 4 --outputdir logs tests/
+```
 
 6. **Execute os testes de forma headless**
-# TODO
+🕶️ Os testes deste projeto estão configurados para rodar o navegador em modo headless, o que significa que o navegador não será aberto visualmente durante a execução, tornando os testes mais rápidos e compatíveis com ambientes como CI/CD (GitHub Actions, Jenkins, etc).
+
+Configuração da keyword para Chrome:
+
+```bash
+Open the browser
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Open Browser    ${URL}    ${BROWSER}    options=${options}
+    Maximize Browser Window
+```
+- Essa keyword é reutilizada nos testes para garantir que todos sejam executados no modo headless automaticamente.
+
+▶️ Executando testes no modo headless
+Como o modo headless já está configurado nas keywords, basta rodar os testes normalmente:
+
+- Execução paralela com headless:
+```bash
+pabot --processes 4 --outputdir logs tests/
+```
+- Execução sequencial com headless:
+```bash
+robot --outputdir logs tests/
+```
 
 7. **Veja os relatórios**
    - Após a execução, acesse os artefatos gerados em  `/reports` e `/logs`.
