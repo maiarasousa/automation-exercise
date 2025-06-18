@@ -1,0 +1,12 @@
+datasources:8c0b5ecbd4e55fc07f51cd6fc1b8242255f2cd61
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:475cba2ab89fd4457654ae8b4b2a296abac7f552
+--suite Tests.Contact Us
+--suite Tests.Login User
+--suite Tests.Logout User
+--suite Tests.Products Details
+--suite Tests.Register User
+--suite Tests.Search Product
+--suite Tests.Subscription Home Page
+--suite Tests.Test Case Page

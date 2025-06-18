@@ -12,6 +12,7 @@ ${EMAIL}        Email
 
 Scroll to the subscription
     Scroll Element Into View   xpath=//*[@id="susbscribe_email"]
+    Sleep   2s
     Element Should Be Visible   xpath=//*[@id="footer"]/div[1]/div/div/div[2]/div/h2
 
 Fill my email and click button

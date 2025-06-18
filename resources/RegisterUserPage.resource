@@ -24,7 +24,7 @@ ${INVALID_PASSWORD}  invalidpassword
 *** Keywords ***
 
 Open the browser
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    ${URL}    ${BROWSER}        options=--headless
     Maximize Browser Window
 
 On the registration page
