@@ -120,7 +120,8 @@ pabot --processes 4 --outputdir logs tests/
 ```
 
 6. **Execute os testes de forma headless**
-- 🕶️ Os testes deste projeto estão configurados para rodar o navegador em modo headless, o que significa que o navegador não será aberto visualmente durante a execução, tornando os testes mais rápidos e compatíveis com ambientes como CI/CD (GitHub Actions, Jenkins, etc).
+
+🕶️ Os testes deste projeto estão configurados para rodar o navegador em modo headless, o que significa que o navegador não será aberto visualmente durante a execução, tornando os testes mais rápidos e compatíveis com ambientes como CI/CD (GitHub Actions, Jenkins, etc).
 
 Configuração da keyword para Chrome:
 
