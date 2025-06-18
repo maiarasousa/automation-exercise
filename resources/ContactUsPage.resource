@@ -24,7 +24,7 @@ Fill the form of contact us
     Input Text        xpath=//*[@data-qa="email"]   ${EMAIL}    ${Email}
     Input Text        xpath=//*[@data-qa="subject"]       Information about a product
     Input Text        xpath=//*[@data-qa="message"]       Hi! I’d like more information about a product, please.
-    Choose File       xpath=//*[@id="contact-us-form"]/div[5]/input       ${CURDIR}data/image/Test_Qa.jpg
+    Choose File       xpath=//*[@id="contact-us-form"]/div[5]/input       ${EXECDIR}/data/image/Test_Qa.jpg
     Click Button      xpath=//*[@data-qa="submit-button"]
     Handle Alert      action=accept  
         

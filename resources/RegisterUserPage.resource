@@ -24,7 +24,9 @@ ${INVALID_PASSWORD}  invalidpassword
 *** Keywords ***
 
 Open the browser
-    Open Browser    ${URL}    ${BROWSER}        options=--headless
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Open Browser    ${URL}    ${BROWSER}    options=${options}
     Maximize Browser Window
 
 On the registration page
