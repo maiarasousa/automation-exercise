@@ -119,31 +119,41 @@ pip install robotframework-pabot
 pabot --processes 4 --outputdir logs tests/
 ```
 
-6. **Execute os testes de forma headless**
+6. **Execute os testes de forma headless (ou não)**
 
-🕶️ Os testes deste projeto estão configurados para rodar o navegador em modo headless, o que significa que o navegador não será aberto visualmente durante a execução, tornando os testes mais rápidos e compatíveis com ambientes como CI/CD (GitHub Actions, Jenkins, etc).
+🕶️ Os testes deste projeto estão configurados para rodar o navegador em modo headless, o que significa que o navegador não será aberto visualmente durante a execução, tornando os testes mais rápidos e compatíveis com ambientes como CI/CD (GitHub Actions, Jenkins, etc). No entanto, é possível alternar entre modo headless e modo visual usando uma variável de ambiente no momento da execução.
+
+⚙️ Como funciona
+- No projeto, a variável ${HEADLESS} controla se os testes devem rodar com ou sem headless. Por padrão, ela está definida como True, mas você pode sobrescrevê-la com o parâmetro --variable.
 
 Configuração da keyword para Chrome:
 
 ```bash
 Open the browser
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --headless
+    Run Keyword If    '${HEADLESS}'=='True'    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
     Open Browser    ${URL}    ${BROWSER}    options=${options}
     Maximize Browser Window
 ```
 - Essa keyword é reutilizada nos testes para garantir que todos sejam executados no modo headless automaticamente.
+- Essa lógica está implementada nas keywords reutilizáveis dentro da pasta resources/, usando ChromeOptions.
+- A keyword avalia o valor da variável ${HEADLESS} para decidir se deve ou não ativar o modo headless.
 
 ▶️ Executando testes no modo headless
 Como o modo headless já está configurado nas keywords, basta rodar os testes normalmente:
 
+- Executar com navegador headless (modo silencioso):
+```bash
+robot --variable HEADLESS:True --outputdir logs tests/
+```
 - Execução paralela com headless:
 ```bash
-pabot --processes 4 --outputdir logs tests/
+pabot --processes 4 --variable HEADLESS:True --outputdir logs tests/
 ```
-- Execução sequencial com headless:
+- Executar com navegador visível (modo gráfico):
 ```bash
-robot --outputdir logs tests/
+robot --variable HEADLESS:False --outputdir logs tests/
 ```
 
 7. **Veja os relatórios**

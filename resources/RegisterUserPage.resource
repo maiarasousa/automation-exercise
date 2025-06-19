@@ -25,7 +25,8 @@ ${INVALID_PASSWORD}  invalidpassword
 
 Open the browser
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --headless
+    Run Keyword If    '${HEADLESS}'=='True'    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
     Open Browser    ${URL}    ${BROWSER}    options=${options}
     Maximize Browser Window
 
