@@ -14,7 +14,7 @@ Neste repositório você vai encontrar scripts de automação de testes visando 
 ## 📌 Requisitos
 - Python 3.8 ou superior
 - pip (gerenciador de pacotes)
-- Naveador (Chrome, Firefox, etc.)
+- Navegador (Chrome, Firefox, etc.)
 - WebDriver compatível com o navegador instalado
 
 ## 📑 Estrutura do Projeto
@@ -51,7 +51,7 @@ automation-exercise/
 ├── .gitignore                   # Ignora arquivos irrelevantes para versionamento
 └── README.md                    # Documentação do projeto
 ```
-<p> A estrutura deste projeto foi planejada para garantir organização, reutilização e escalabilidade dos testes automatizados. Separar os arquivos de testes, recursos e dados facilita a manutenção e evitar duplicação de código, seguindo o princípio DRY (Don't Repeat Yourself). 
+<p> A estrutura deste projeto foi planejada para garantir organização, reutilização e escalabilidade dos testes automatizados. Separar os arquivos de testes, recursos e dados facilita a manutenção e evita duplicação de código, seguindo o princípio DRY (Don't Repeat Yourself). 
    
    Além disso, essa abordagem torna o projeto mais acessível para novos colaboradores, permitindo que qualquer pessoa compreenda rapidamente o funcionamento dos testes e contribua com facilidade. A estrutura modular também favorece a integração com pipelines de CI/CD, possibilitando execuções automáticas e contínuas. Com padronização clara e responsabilidades bem definidas, o projeto se torna uma base sólida e reutilizável, podendo ser adotado como modelo para outras squads ou equipes. Esses fatores tornam a automação mais sustentável no longo prazo e aumentam significativamente a qualidade e produtividade da equipe de QA.</p>
 
@@ -154,7 +154,7 @@ robot --outputdir logs tests/
 1. Faça um fork do projeto
 2. Crie uma branch para sua feature/fix (`git checkout -b minha-feature`)
 3. Commit suas alterações (`git commit -m 'Adicionar minha feature'`)
-4. Push para a branch (`git push origin minha-feature`)
+4. Dê push para a branch (`git push origin minha-feature`)
 5. Abra um Pull Request
 
 ## 📝 Licença
@@ -164,7 +164,6 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 ## 📧 Contato
 
 Este projeto está em constante evolução e sugestões são sempre bem-vindas!  
-Se você encontrar algum **bug**, tiver alguma **ideia de melhoria** ou quiser contribuir de alguma forma,  
-sinta-se à vontade. 
+Se você encontrar algum **bug**, tiver alguma **ideia de melhoria** ou quiser contribuir de alguma forma, sinta-se à vontade para entrar em contato.. 
 - GitHub: [maiarasousa](https://github.com/maiarasousa)
 
