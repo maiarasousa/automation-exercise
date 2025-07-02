@@ -6,7 +6,6 @@ Library           FakerLibrary       locale=en_US
 Documentation     This is a test suite for registering a user
 
 *** Variables ***
-${URL}            https://automationexercise.com/
 ${BROWSER}        chrome
 ${USERNAME}       Name
 ${LAST_NAME}      LastName
