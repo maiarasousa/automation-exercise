@@ -21,13 +21,13 @@ Neste repositório você vai encontrar scripts de automação de testes visando 
 ```text
 automation-exercise/
 ├── .github/                     # Integrações com Github
-│   └── workflows                # Arquivos YAML do GitHub Actions
-│   ├── CODEOWNERS               # Define responsáveis por pastas/arquivos
 │   ├── PULL_REQUEST_TEMPLATE.md # Template padrão para PRs
 ├── data/                        # Dados auxiliares para os testes
 │   └── images
-│   └── configs
-│   └── credentials               
+├── env/                        # Configurações de ambiente
+│   └── dev.py
+│   └── hml.py
+│   └── prod.py       
 ├── reports/                     # Relatórios de teste
 │   └── html
 │   └── xml
@@ -45,9 +45,6 @@ automation-exercise/
 │   ├── logout_user.robot
 │   ├── register_user.robot
 │   ├── test_case_page.robot
-│── logs/                        # Logs das execuções dos testes
-│   ├── log.html
-│   ├── output.xml
 ├── .gitignore                   # Ignora arquivos irrelevantes para versionamento
 └── README.md                    # Documentação do projeto
 ```
@@ -62,7 +59,7 @@ automation-exercise/
 - A abordagem BDD facilita a comunicação entre áreas técnicas e não técnicas, pois os testes são escritos de forma mais próxima da linguagem de negócio.
 - Com isso, stakeholders, analistas e desenvolvedores conseguem entender os testes sem precisar conhecer a fundo a linguagem de automação.
 - Essa estrutura torna os testes mais legíveis, colaborativos e alinhados com os critérios de aceitação das funcionalidades.
-- Após a execução, são gerados automaticamente relatórios e logs detalhados em logs/ (fora da pasta tests/), incluindo log.html, report.html e output.xml.
+- Após a execução, são gerados automaticamente relatórios e reports detalhados em reports/ (fora da pasta tests/), incluindo log.html, report.html e output.xml.
   
 
 ## 🚀 Como rodar o projeto
@@ -114,9 +111,9 @@ automation-exercise/
 pip install robotframework-pabot
 ```
 🚀 Execução em paralelo
-- Para executar os testes em paralelo e salvar os logs na pasta logs, use o comando abaixo:
+- Para executar os testes em paralelo e salvar os reports na pasta reports, use o comando abaixo:
 ```bash
-pabot --processes 4 --outputdir logs tests/
+pabot --processes 4 --outputdir reports tests/
 ```
 
 6. **Execute os testes de forma headless (ou não)**
@@ -145,19 +142,49 @@ Como o modo headless já está configurado nas keywords, basta rodar os testes n
 
 - Executar com navegador headless (modo silencioso):
 ```bash
-robot --variable HEADLESS:True --outputdir logs tests/
+robot --variable HEADLESS:True --outputdir reports tests/
 ```
 - Execução paralela com headless:
 ```bash
-pabot --processes 4 --variable HEADLESS:True --outputdir logs tests/
+pabot --processes 4 --variable HEADLESS:True --outputdir reports tests/
 ```
 - Executar com navegador visível (modo gráfico):
 ```bash
-robot --variable HEADLESS:False --outputdir logs tests/
+robot --variable HEADLESS:False --outputdir reports tests/
+```
+▶️ Executando testes por ambiente
+
+🌎 Este projeto permite executar os testes em diferentes ambientes (ex: desenvolvimento, homologação, produção) usando arquivos de variáveis específicos para cada ambiente, localizados na pasta `env/`.
+
+⚙️ Como funciona
+- Para cada ambiente, existe um arquivo Python com as variáveis necessárias, com a URL.
+
+- Para rodar os testes em um ambiente específico, utilize o parâmetro `--variablefile` na linha de comando, apontando para o arquivo desejado.
+
+**Exemplo de execução em ambiente de desenvolvimento:**
+```bash
+robot --variablefile env/dev.py --outputdir reports tests/
 ```
 
+**Exemplo de execução em ambiente de homologação:**
+```bash
+robot --variablefile env/hml.py --outputdir reports tests/
+```
+
+**Execução em ambiente de produção:**
+```bash
+robot --variablefile env/prod.py --outputdir reports tests/
+```
+
+**Execução default:**
+Na execução default é utilizado o arquivo de dev.py onde está configurado o ambiente como padrão.
+```bash
+robot -- outputdir reports tests/
+```
+
+
 7. **Veja os relatórios**
-   - Após a execução, acesse os artefatos gerados em  `/reports` e `/logs`.
+   - Após a execução, acesse os artefatos gerados em  `/reports`.
 
 ## 🤝 Como contribuir
 
