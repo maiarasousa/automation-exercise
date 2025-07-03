@@ -1,1 +1,2 @@
-URL = "https://automationexercise.com/"
+URL = "https://google.com.br"
+HEADLESS = False

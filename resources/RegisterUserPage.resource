@@ -1,11 +1,11 @@
 *** Settings ***
-
+Variables       ../env/dev.py
 Library           SeleniumLibrary
 Library           FakerLibrary       locale=en_US
 
 Documentation     This is a test suite for registering a user
 
-*** Variables ***
+*** Variables ***   
 ${BROWSER}        chrome
 ${USERNAME}       Name
 ${LAST_NAME}      LastName
@@ -24,8 +24,10 @@ ${INVALID_PASSWORD}  invalidpassword
 
 Open the browser
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Run Keyword If    '${HEADLESS}'=='True'    Call Method    ${options}    add_argument    --headless
+    Run Keyword If    '${HEADLESS}'=='True'     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --disable-gpu
+    Run Keyword If    '${URL}' == '' or '${URL}' == 'None'    Set Suite Variable    ${URL}    ${URL}
+    Log To Console    Getting the URL: ${URL}
     Open Browser    ${URL}    ${BROWSER}    options=${options}
     Maximize Browser Window
 

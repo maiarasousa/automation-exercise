@@ -150,6 +150,36 @@ pabot --processes 4 --variable HEADLESS:True --outputdir reports tests/
 ```bash
 robot --variable HEADLESS:False --outputdir reports tests/
 ```
+▶️ Executando testes por ambiente
+
+🌎 Este projeto permite executar os testes em diferentes ambientes (ex: desenvolvimento, homologação, produção) usando arquivos de variáveis específicos para cada ambiente, localizados na pasta `env/`.
+
+⚙️ Como funciona
+- Para cada ambiente, existe um arquivo Python com as variáveis necessárias, com a URL.
+
+- Para rodar os testes em um ambiente específico, utilize o parâmetro `--variablefile` na linha de comando, apontando para o arquivo desejado.
+
+**Exemplo de execução em ambiente de desenvolvimento:**
+```bash
+robot --variablefile env/dev.py --outputdir reports tests/
+```
+
+**Exemplo de execução em ambiente de homologação:**
+```bash
+robot --variablefile env/hml.py --outputdir reports tests/
+```
+
+**Execução em ambiente de produção:**
+```bash
+robot --variablefile env/prod.py --outputdir reports tests/
+```
+
+**Execução default:**
+Na execução default é utilizado o arquivo de dev.py onde está configurado o ambiente como padrão.
+```bash
+robot -- outputdir reports tests/
+```
+
 
 7. **Veja os relatórios**
    - Após a execução, acesse os artefatos gerados em  `/reports`.
