@@ -20,6 +20,8 @@ Neste repositório você vai encontrar scripts de automação de testes visando 
 ## 📑 Estrutura do Projeto
 ```text
 automation-exercise/
+├── .github/                     # Integrações com Github
+│   ├── PULL_REQUEST_TEMPLATE.md # Template padrão para PRs
 ├── data/                        # Dados auxiliares para os testes
 │   └── images
 ├── env/                        # Configurações de ambiente
